@@ -1,10 +1,10 @@
 import React from "react";
-import myImg from "../assets/images/apps.png";
+import myImg from "../assets/images/_MG_9967.jpg";
 import CountUp from "react-countup";
 
 function Hero() {
   return (
-    <section className="pt-0" id="about">
+    <section className="pt-20" id="about">
       <div className="container pt-14">
         <div className="md:flex items-center justify-between sm:flex-col md:flex-row">
           {/*----------- Left content ------------*/}
@@ -77,8 +77,8 @@ function Hero() {
           {/*----------- Left end ------------*/}
           {/*----------- Right img ------------*/}
           <div className="basis-1/3 mt-10 sm:mt-0 ">
-            <span className="w-[300px] h-[300px] bg-primaryColor rounded-full flex items-center justify-center ">
-              <figure className="flex items-center justify-center">
+            <span className="">
+              <figure className="flex items-center border-accentColor border-8 w-[300px] h-[300px]justify-center">
                 <img src={myImg} alt="profile_photo" />
               </figure>
             </span>
