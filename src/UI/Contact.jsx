@@ -1,11 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // emailjs proprety
+    const serviceId = "service_3f235mf";
+    const templateIde = "template_yn2i2af";
+    const publicKey = "hUcIlOyKe_FmFIsL7";
+
+    // new object with dynamic data
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      to_name: "Aleksandra",
+      subject: subject,
+      message: message,
+    };
+
+    // send email
+
+    emailjs
+      .send(serviceId, templateIde, templateParams, publicKey)
+      .then((response) => {
+        console.log("SUCCESS!", response);
+        setName("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
+      })
+      .catch((error) => {
+        console.log("FAILED...", error);
+      });
+  };
+
   return (
     <section id="contact" className="pb-16">
       <div className="container">
         <h2 className="text-headingColor font-[700] text-[2.5rem] mb-8">
-          Get in touch
+          Send me a message:
         </h2>
         <div className="md:flex justify-between items-center">
           <div className="w-full md:w-1/2 h-[300px] sm:h-[450px]">
@@ -20,11 +59,13 @@ const Contact = () => {
           </div>
 
           <div className="w-full mt-8 md:mt-0 md:w-1/2 sm:h-[450px] lg:flex items-center bg-primaryColor px-4 lg:px-8 py-8">
-            <form className="w-full">
+            <form onSubmit={handleSubmit} className="w-full">
               <div className="mb-5">
                 <input
                   type="text"
                   placeholder="Enter your name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   className="w-full p-3 focus:outline-none rounded-[5px]"
                 />
               </div>
@@ -32,6 +73,8 @@ const Contact = () => {
                 <input
                   type="email"
                   placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="w-full p-3 focus:outline-none rounded-[5px]"
                 />
               </div>
@@ -39,6 +82,8 @@ const Contact = () => {
                 <input
                   type="text"
                   placeholder="Subject"
+                  value={subject}
+                  onChange={(e) => setSubject(e.target.value)}
                   className="w-full p-3 focus:outline-none rounded-[5px]"
                 />
               </div>
@@ -48,6 +93,8 @@ const Contact = () => {
                   type="text"
                   rows={3}
                   placeholder="Write your message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                   className="w-full p-3 focus:outline-none rounded-[5px]"
                 />
               </div>

@@ -1,12 +1,19 @@
 import React from "react";
-import myImg from "../assets/images/_MG_9967.jpg";
-import CountUp from "react-countup";
+//import myImg from "../assets/images/_MG_9967.jpg";
+//import CountUp from "react-countup";
+import { CiLinkedin } from "react-icons/ci";
+import { FaGithub } from "react-icons/fa";
+import Aos from "aos";
+import { useEffect } from "react";
 
 function Hero() {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   return (
     <section className="pt-20" id="about">
-      <div className="container pt-14">
-        <div className="md:flex items-center justify-between sm:flex-col md:flex-row">
+      <div className="container pt-14 pb-14">
+        <div className="md:flex items-center justify-center sm:flex-col md:flex-row">
           {/*----------- Left content ------------*/}
           <div className="w-full md:basis-1/2">
             <h5
@@ -22,7 +29,7 @@ function Hero() {
               className="text-textColor font-[800] text-[1.8rem] sm:text-[40px] leading-[35px] sm:leading-[50px] mt-4"
             >
               I'm Aleksandra Hamon <br />
-              Fullstack Web Developer
+              Web Developer
             </h1>
             <div
               data-aos="fade-up"
@@ -47,45 +54,60 @@ function Hero() {
               data-aos-duration="1200"
               className="flex gap-2 text-textColor font-[500] text-[15px] mt-12 leadint-7 sm:pl-14 sm:pr-10"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id fuga
-              eum unde velit distinctio sequi modi accusantium vel aperiam
-              deleniti corrupti voluptatem porro nulla, rerum minima repellat
-              magnam molestias! Beatae.
+              Welcome to my portfolio website! I'm a dedicated web developer
+              residing in Saint-Marcellin, Isère, France. Specializing in
+              creating compelling digital experiences, I offer expertise in
+              crafting innovative web solutions. Explore my portfolio to see
+              examples of my work across frontend development, backend
+              programming, and UI/UX design. Let's collaborate to bring your web
+              projects to life with creativity, innovation, and technical
+              excellence.
             </p>
 
-            <div className="flex items-center gap-9 mt-14">
-              <span className="text-textColor text-[15px] font-[600]">
+            <div className="flex items-center gap-5 mt-14">
+              <h2 className="text-textColor text-[15px] font-[600]">
                 Follow me:
-              </span>
-              <span>
-                <a
-                  href="#github"
-                  className="text-textColor text-[25px] font-[600] pr-2"
-                >
-                  <i class="ri-github-line"></i>
-                </a>
-                <a
-                  href="#linkedin"
-                  className="text-textColor text-[25px] font-[600]"
-                >
-                  <i class="ri-linkedin-box-line"></i>
-                </a>
-              </span>
+              </h2>
+
+              <div
+                src="https://github.com/Alekshamon"
+                alt="github"
+                className="text-textColor text-[40px] font-[600]  hover:cursor-pointer "
+              >
+                <FaGithub />
+              </div>
+              <div
+                src="https://www.linkedin.com/in/aleksandra-hamon/"
+                alt="linkedin"
+                className="text-textColor text-[40px] font-[600] hover:cursor-pointer"
+              >
+                <CiLinkedin />
+              </div>
             </div>
           </div>
 
           {/*----------- Left end ------------*/}
           {/*----------- Right img ------------*/}
-          <div className="basis-1/3 mt-10 sm:mt-0 ">
-            <span className="">
-              <figure className="flex items-center border-accentColor border-8 w-[300px] h-[300px]justify-center">
+          <div className="basis-1/3 sm:mt-0 m-10 ">
+            <span
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              className="flex rounded-full bg-accentColor w-[300px] h-[300px]"
+            >
+              <span
+                data-aos="fade-up"
+                data-aos-duration="1200"
+                className="flex rounded-full bg-primaryColor w-[200px] h-[400px]"
+              >
+                {/* <figure className="flex items-center rounded-full justify-center">
                 <img src={myImg} alt="profile_photo" />
-              </figure>
+              </figure> */}
+              </span>
             </span>
           </div>
           {/*----------- Right img end ------------*/}
           {/*-----------  content right ------------*/}
-          <div className="mb:basis-1/5 flex justify-between text-center mt-10 flex-wrap gap-3 md:mt-0 md:flex-col md:justify-end md:text-end">
+          {/* <div className="mb:basis-1/5 flex justify-between text-center mt-10 flex-wrap gap-3 md:mt-0 md:flex-col md:justify-end md:text-end">
             <div className="mb-10">
               <h2 className="text-textColor font-[700]  text-[32px]">
                 <CountUp start={0} end={6} duration={2} suffix="+" />
@@ -102,7 +124,7 @@ function Hero() {
                 </h4>
               </div>
             </div>
-          </div>
+          </div> */}
           {/*-----------  content right end ------------*/}
         </div>
       </div>

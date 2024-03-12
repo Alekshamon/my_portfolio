@@ -1,8 +1,16 @@
 import React from "react";
+import { CiLinkedin } from "react-icons/ci";
+import { FaGithub } from "react-icons/fa";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Footer = () => {
   const year = new Date().getFullYear();
 
+  const navigate = useNavigate();
+
+  const handleClickMessage = () => {
+    navigate("/contact");
+  };
   return (
     <footer className="bg-primaryColor pt-12">
       {/* ========= footer top ============ */}
@@ -12,8 +20,11 @@ const Footer = () => {
             <h2 className="text-[26px] leading-10 text-white font-[600] mb-5 md:text-[2rem]">
               Do you want to make beautiful products?
             </h2>
-            <a href="http://localhost:3001/contact">
-              <button className="bg-primaryColor text-white font-[500] flex items-center gap-2 hover:bg-accentColor hover:bg-smallTextColor ease-in duration-300 py-2 px-4 rounded-[8px] border border-accentColor">
+            <a href="mailto:aleksandrahamon@gmail.com">
+              <button
+                handleClickLogin={handleClickMessage}
+                className="bg-primaryColor text-white font-[500] flex items-center gap-2 hover:bg-accentColor hover:bg-smallTextColor ease-in duration-300 py-2 px-4 rounded-[8px] border border-accentColor"
+              >
                 <i class="ri-mail-line"></i> Hire me
               </button>
             </a>
@@ -21,15 +32,28 @@ const Footer = () => {
 
           <div className="w-full sm:w-1/2">
             <p className="text-white leading-7 mt-4 sm:mt-0">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum,
-              autem! Illo voluptates totam omnis maiores inventore vero eveniet
-              molestias rerum.
+              Welcome to my portfolio website! I'm Aleksandra, a dedicated web
+              developer residing in Saint-Marcellin, Isère, France.
             </p>
 
             <div className="flex items-center gap-4 flex-wrap md:gap-8 mt-10">
-              <span className="text-white font-[600] text-[15px]">
+              <div className="text-white font-[600] text-[15px]">
                 Follow Me:
-              </span>
+              </div>
+              <div
+                src="https://github.com/Alekshamon"
+                alt="github"
+                className="text-white text-[40px] font-[600]  hover:cursor-pointer "
+              >
+                <FaGithub />
+              </div>
+              <div
+                src="https://www.linkedin.com/in/aleksandra-hamon/"
+                alt="linkedin"
+                className="text-white text-[40px] font-[600] hover:cursor-pointer"
+              >
+                <CiLinkedin />
+              </div>
             </div>
           </div>
         </div>
@@ -37,33 +61,40 @@ const Footer = () => {
         <div>
           <ul className="flex items-center justify-center gap-10 mt-10">
             <li>
-              <a className="text-white font-[600]" href="http://localhost:3001">
+              <NavLink
+                to="/"
+                className="text-white font-[600]"
+                href="http://localhost:3001"
+              >
                 Home
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a
+              <NavLink
+                to="/services"
                 className="text-white font-[600]"
                 href="http://localhost:3001/services"
               >
                 Services
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a
+              <NavLink
+                to="/portfolio"
                 className="text-white font-[600]"
                 href="http://localhost:3001/portfolio"
               >
                 Portfolio
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a
+              <NavLink
+                to="/contact"
                 className="text-white font-[600]"
                 href="http://localhost:3001/contact"
               >
                 Contact
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
