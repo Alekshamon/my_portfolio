@@ -46,7 +46,7 @@ function Stack() {
         {stack.map((item) => (
           <div
             key={item.id}
-            className="flex items-center justify-center px-2 w-full sm:w-1/2 md:w-1/3 lg:w-1/4"
+            className="flex items-center justify-center px-2 w-full sm:w-1/2 md:w-1/4"
           >
             <div
               data-aos="zoom-in"

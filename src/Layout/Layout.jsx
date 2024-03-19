@@ -5,7 +5,7 @@ import Footer from "../Footer/Footer";
 
 export default function Layout({ children }) {
   return (
-    <div className="bg-gradient-to-br from-amber-500 to-orange-100">
+    <div className="bg-gradient-to-br from-amber-500 to-orange-100  ">
       <Header />
       {children}
       <Footer />

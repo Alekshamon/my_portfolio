@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import logo1 from "../assets/images/AH.png";
 
 export default function Header() {
   const [sticky, setSticky] = useState(false);
@@ -21,12 +22,12 @@ export default function Header() {
       <div className="flex items-center justify-between">
         <div className="mx-7">
           {/* ============= logo=========== */}
-          <h4 className="text-4xl font-bold ml-4 mt-3">
+          <h4 className="text-4xl font-bold ml-4">
             <NavLink
               to="/"
-              className="w-[35px] h-[35px] text-white text-[18px] font-[500] rounded-full flex items-center justify-center "
+              className=" flex items-center justify-center md:w-24 h-24x "
             >
-              <img src="https://img.icons8.com/ios/50/000000/flower.png" />
+              <img src={logo1} alt="logo" />
             </NavLink>
           </h4>
         </div>

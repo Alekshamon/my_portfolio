@@ -48,10 +48,19 @@ const Portfolio = () => {
     <section id="portfolio">
       <div className="container">
         <div className="flex items-center justify-between flex-wrap">
-          <div className="mb-7 sm:mb-0">
+          <div className="mb-1">
             <h3 className="text-textColor text-[2rem] font-[700]">
               My recent projects
             </h3>
+            <p className="md:max-w-[600px] md:mx-auto text-textColor font-[500] text-[16px] leading-7 ">
+              Welcome to the heart of my portfolio – the showcase of my work. In
+              this section, you'll find a curated selection of projects that
+              demonstrate my skills, creativity, and dedication to crafting
+              exceptional digital experiences. From web applications to
+              responsive websites, each project reflects my passion for
+              innovation and attention to detail. Dive in, explore, and discover
+              the possibilities of collaboration.
+            </p>
           </div>
 
           <div className="flex gap-3">
@@ -82,7 +91,7 @@ const Portfolio = () => {
               data-aos="fade-zoom-in"
               data-aos-delay="50"
               data-aos-duration="1000"
-              className="group max-w-full sm:w-[48.5%] md:w-[31.8%] lg:w-[32.2%] relative z-[1]"
+              className="group max-w-full sm:w-[48.5%]  md:w-[32.2%] relative z-[1]"
             >
               <figure>
                 <img

@@ -12,12 +12,12 @@ const Services = () => {
   }, []);
   return (
     <section id="services">
-      <div className="container lg:pt-5">
+      <div className="container md:pt-5">
         <div className="text-center">
           <h2 className="text-textColor font-[800] text-[2.4rem] mb-5">
             What do I help
           </h2>
-          <p className="lg:max-w-[600px] lg:mx-auto text-textColor font-[500] text-[16px] leading-7 ">
+          <p className="md:max-w-[600px] md:mx-auto text-textColor font-[500] text-[16px] leading-7 ">
             With a comprehensive skill set encompassing frontend development,
             backend programming, and UI/UX design, I specialize in delivering
             seamless digital solutions that marry aesthetics with functionality.

@@ -12,13 +12,13 @@ function App() {
     Aos.init({ duration: 1000 });
   }, []);
   return (
-    <div>
+    <main className="flex flex-wrap justify-center ">
       <Hero />
       <Stack />
       <Services />
       <Portfolio />
       <Contact />
-    </div>
+    </main>
   );
 }
 
