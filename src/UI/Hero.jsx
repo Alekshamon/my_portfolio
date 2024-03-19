@@ -101,7 +101,7 @@ function Hero() {
               className="text-textColor text-[40px] font-[600] hover:cursor-pointer"
             >
               <CiLinkedin />
-            </d>
+            </a>
           </div>
 
           {/*----------- Left end ------------*/}
