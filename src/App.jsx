@@ -12,7 +12,7 @@ function App() {
     Aos.init({ duration: 1000 });
   }, []);
   return (
-    <main className="flex flex-wrap justify-center ">
+    <main className=" max-w-[1600px]flex flex-wrap justify-center ">
       <Hero />
       <Stack />
       <Services />
