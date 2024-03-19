@@ -42,14 +42,14 @@ const Portfolio = () => {
   }, [selectTab]);
 
   const buttonClasses =
-    "text-smallTextColor border border-solid border-smallTextColor py-2 px-4 rounded-[8px] hover:cursor-pointer hover:text-primaryColor transition-transform ease-in duration-200";
+    "text-textColor border border-solid border-textColor py-2 px-4 rounded-[8px] hover:cursor-pointer hover:text-white transition-transform ease-in duration-200";
 
   return (
     <section id="portfolio">
       <div className="container">
         <div className="flex items-center justify-between flex-wrap">
           <div className="mb-7 sm:mb-0">
-            <h3 className="text-headingColor text-[2rem] font-[700]">
+            <h3 className="text-textColor text-[2rem] font-[700]">
               My recent projects
             </h3>
           </div>
@@ -97,7 +97,7 @@ const Portfolio = () => {
                 <div className="w-full h-full flex items-center justify-center">
                   <button
                     //onClick={() => showModalHandler(portfolio.id)}
-                    className="text-white bg-headingColor hover:bg-smallTextColor py-2 px-4 rounded-[8px] font-[500] ease-in duration-200"
+                    className="text-white bg-textColor hover:bg-white py-2 px-4 rounded-[8px] font-[500] ease-in duration-200"
                   >
                     Comming soon
                   </button>
@@ -111,7 +111,7 @@ const Portfolio = () => {
           {nextItems < portfolios.length && data.length > 6 && (
             <button
               onClick={loadMoreHandler}
-              className="text-white bg-primaryColor hover:bg-smallTextColor py-2 px-4 rounded-[8px] font-[500] ease-in duration-200"
+              className="text-white bg-primaryColor hover:bg-textColor py-2 px-4 rounded-[8px] font-[500] ease-in duration-200"
             >
               Load More
             </button>

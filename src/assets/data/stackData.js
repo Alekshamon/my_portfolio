@@ -13,12 +13,6 @@ const stack = [
     title: "React",
     category: "Frontend",
   },
-  {
-    id: "03",
-    image: "https://img.icons8.com/color/48/000000/symfony.png",
-    title: "Symfony",
-    category: "Frontend",
-  },
 
   {
     id: "04",
@@ -26,12 +20,7 @@ const stack = [
     title: "Tailwind CSS",
     category: "Frontend",
   },
-  {
-    id: "05",
-    image: "https://img.icons8.com/color/48/000000/bootstrap.png",
-    title: "Bootstrap",
-    category: "Frontend",
-  },
+
   {
     id: "06",
     image: "https://img.icons8.com/officel/48/000000/php-logo.png",
@@ -56,6 +45,7 @@ const stack = [
     title: "MySQL",
     category: "Backend",
   },
+
   {
     id: "10",
     image: "https://img.icons8.com/color/48/000000/figma.png",
@@ -64,15 +54,9 @@ const stack = [
   },
   {
     id: "11",
-    image: "https://img.icons8.com/color/48/000000/adobe-xd.png",
-    title: "Adobe XD",
-    category: "UI/UX",
-  },
-  {
-    id: "12",
-    image: "https://img.icons8.com/color/48/000000/adobe-illustrator.png",
-    title: "Adobe Illustrator",
-    category: "UI/UX",
+    image: "https://img.icons8.com/color/48/000000/wordpress.png",
+    title: "WordPress",
+    category: "Backend",
   },
 ];
 

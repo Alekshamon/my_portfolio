@@ -4,12 +4,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        primaryColor: "#FEBE98",
-        secondaryColor: "#FOCFBA",
-        thirdColor: "#F2E9D9",
-        textColor: "#464646",
-        accentColor: "#F87472",
-        buttonColor: "#DF7F83",
+        primaryColor: "#FFBE00",
+        secondaryColor: "#AB8F5E",
+        thirdColor: "#C1554D",
+        textColor: "#522800",
+        accentColor: "#B8B900",
+        buttonColor: "#B8B900",
       },
     },
   },

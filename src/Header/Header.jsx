@@ -1,89 +1,132 @@
-import React from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 export default function Header() {
-  const navigate = useNavigate();
+  const [sticky, setSticky] = useState(false);
+  const [open, setOpen] = useState(false);
 
-  const handleClickMessage = () => {
-    navigate("/contact");
-  };
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      const nav = document.querySelector("nav");
+      window.scrollY > 0 ? setSticky(true) : setSticky(false);
+    });
+  }, []);
 
   return (
-    <header className="w-full h-[80px] leading-[80px] flex items-center">
-      <div className="container">
-        <div className="flex items-center justify-between">
+    <nav
+      classNmane={` fixed w-full left-0 top-0 z-[999] ${
+        sticky ? "bg-white/60  text-gray-900" : "text-white"
+      }`}
+    >
+      <div className="flex items-center justify-between">
+        <div className="mx-7">
           {/* ============= logo=========== */}
-          <div className="flex items-center gap-[10px]">
+          <h4 className="text-4xl font-bold ml-4 mt-3">
             <NavLink
               to="/"
-              className="w-[35px] h-[35px] bg-primaryColor text-white text-[18px] font-[500] rounded-full flex items-center justify-center "
+              className="w-[35px] h-[35px] text-white text-[18px] font-[500] rounded-full flex items-center justify-center "
             >
-              AH
+              <img src="https://img.icons8.com/ios/50/000000/flower.png" />
             </NavLink>
-
-            <div className="leading-[20px]">
-              <h2 className="text-xl text-smallTextColor font-[700]">
-                Aleksandra Hamon
-              </h2>
-            </div>
-          </div>
-
-          {/* =========== logo end ============== */}
-          {/* =========== menu start =============== */}
-          <div className="menu">
-            <ul className="flex items-center gap-10">
-              <li>
-                <NavLink to="/" className="text-smallTextColor font-[600]">
-                  Home
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/services"
-                  className="text-smallTextColor font-[600]"
-                >
-                  Services
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/portfolio"
-                  className="text-smallTextColor font-[600]"
-                >
-                  Portfolio
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/contact"
-                  className="text-smallTextColor font-[600]"
-                >
-                  Contact
-                </NavLink>
-              </li>
-            </ul>
-          </div>
-          {/* =========== menu end =============== */}
-
-          {/* ========= menu right ========== */}
-          <div className="hidden md:flex md:items-center md:gap-4">
-            <a
-              href="mailto:aleksandrahamon@gmail.com"
-              className="flex items-center gap-2 text-smallTextColor font-[600] border border-solid border-smallTextColor py-2 px-4 rounded-[8px] max-h-[40px] hover:bg-smallTextColor hover:text-accentColor hover:font-[500] ease-in duration-300"
-            >
-              <i className="ri-send-plane-line"></i> Let's Talk
-            </a>
-
-            <span
-              handleClickLogin={handleClickMessage}
-              className="text-2xl text-smallTextColor md:hidden cursor-pointer"
-            >
-              <i className="ri-menu-line"></i>
-            </span>
-          </div>
-          {/* ========= menu end ========== */}
+          </h4>
         </div>
+        {/* =========== logo end ============== */}
+        {/* =========== menu start =============== */}
+        <div
+          className={` ${
+            sticky ? "md:bg-white/0 bg-white" : "bg-white"
+          } text-gray-900 md:block hidden px-7 py-2 font-medium  rounded-bl-full`}
+        >
+          <ul className="flex items-center gap-1 py-2 text-lg">
+            <li className="px-6 hover:text-accentColor">
+              <NavLink to="/" className="text-smallTextColor font-[600]">
+                Home
+              </NavLink>
+            </li>
+            <li className="px-6 hover:text-accentColor">
+              <NavLink
+                to="/services"
+                className="text-smallTextColor font-[600]"
+              >
+                Services
+              </NavLink>
+            </li>
+            <li className="px-6 hover:text-accentColor">
+              <NavLink
+                to="/portfolio"
+                className="text-smallTextColor font-[600]"
+              >
+                Portfolio
+              </NavLink>
+            </li>
+            <li className="px-6 hover:text-accentColor">
+              <NavLink to="/contact" className="text-smallTextColor font-[600]">
+                Contact
+              </NavLink>
+            </li>
+          </ul>
+        </div>
+        {/* =========== menu end =============== */}
+
+        {/* ========= menu right ========== */}
+        <div
+          onClick={() => setOpen(!open)}
+          className={`z-[999]  ${
+            open ? "text-gray-900" : "text-gray-100"
+          } text-3xl md:hidden m-5`}
+        >
+          <ion-icon name="menu"></ion-icon>
+        </div>
+        <div
+          className={`md:hidden text-gray-900 absolute w-2/3 h-screen
+      px-7 py-2 font-medium bg-white top-0 duration-300 ${
+        open ? "right-0" : "right-[-100%]"
+      }`}
+        >
+          <ul className="flex flex-col justify-center h-full gap-10 py-2 text-lg">
+            <li
+              onClick={() => setOpen(false)}
+              className="px-6 hover:text-accentColor"
+            >
+              <NavLink to="/" className="text-smallTextColor font-[600]">
+                Home
+              </NavLink>
+            </li>
+            <li
+              onClick={() => setOpen(false)}
+              className="px-6 hover:text-accentColor"
+            >
+              <NavLink
+                to="/services"
+                className="text-smallTextColor font-[600]"
+              >
+                Services
+              </NavLink>
+            </li>
+            <li
+              onClick={() => setOpen(false)}
+              className="px-6 hover:text-accentColor"
+            >
+              <NavLink
+                to="/portfolio"
+                className="text-smallTextColor font-[600]"
+              >
+                Portfolio
+              </NavLink>
+            </li>
+            <li
+              onClick={() => setOpen(false)}
+              className="px-6 hover:text-accentColor"
+            >
+              <NavLink to="/contact" className="text-smallTextColor font-[600]">
+                Contact
+              </NavLink>
+            </li>
+          </ul>
+        </div>
+
+        {/* ========= menu end ========== */}
       </div>
-    </header>
+    </nav>
   );
 }

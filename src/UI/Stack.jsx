@@ -17,13 +17,11 @@ function Stack() {
   }, [selectTab]);
 
   const buttonClasses =
-    "text-smallTextColor border border-solid border-smallTextColor py-2 px-4 rounded-[8px] hover:cursor-pointer hover:text-primaryColor transition-transform ease-in duration-200";
+    "text-textColor border border-solid border-textColor py-2 px-4 rounded-[8px] hover:cursor-pointer hover:text-white transition-transform ease-in duration-200";
 
   return (
     <div className=" container mx-auto px-4">
-      <h1 className="text-headingColor text-2xl font-semibold mb-6">
-        My stack
-      </h1>
+      <h1 className="text-textColor text-2xl font-semibold mb-6">My stack</h1>
       <div className="flex flex-wrap justify-center gap-4 mb-6">
         <button onClick={() => setSelectTab("all")} className={buttonClasses}>
           All

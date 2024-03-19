@@ -14,10 +14,10 @@ const Services = () => {
     <section id="services">
       <div className="container lg:pt-5">
         <div className="text-center">
-          <h2 className="text-headingColor font-[800] text-[2.4rem] mb-5">
+          <h2 className="text-textColor font-[800] text-[2.4rem] mb-5">
             What do I help
           </h2>
-          <p className="lg:max-w-[600px] lg:mx-auto text-headingColor font-[500] text-[16px] leading-7 ">
+          <p className="lg:max-w-[600px] lg:mx-auto text-textColor font-[500] text-[16px] leading-7 ">
             With a comprehensive skill set encompassing frontend development,
             backend programming, and UI/UX design, I specialize in delivering
             seamless digital solutions that marry aesthetics with functionality.
@@ -47,7 +47,7 @@ const Services = () => {
                           Frontend Development
                         </h3>
 
-                        <p className="text-[15px] text-smallTextColor group-hover:text-white group-hover:font-[500] leading-7">
+                        <p className="text-[15px] text-textColor group-hover:text-white group-hover:font-[500] leading-7">
                           In frontend development, I focus on creating visually
                           stunning and intuitive user interfaces that not only
                           captivate the audience but also enhance usability.
@@ -83,7 +83,7 @@ const Services = () => {
                           Backend Development
                         </h3>
 
-                        <p className="text-[15px] text-smallTextColor group-hover:text-white group-hover:font-[500] leading-7">
+                        <p className="text-[15px] text-textColor group-hover:text-white group-hover:font-[500] leading-7">
                           On the backend, I thrive in architecting robust and
                           scalable systems that power the frontend experience.
                           By leveraging my expertise in backend programming
@@ -119,7 +119,7 @@ const Services = () => {
                           UI/UX Design
                         </h3>
 
-                        <p className="text-[15px] text-smallTextColor group-hover:text-white group-hover:font-[500] leading-7">
+                        <p className="text-[15px] text-textColor group-hover:text-white group-hover:font-[500] leading-7">
                           In UI/UX design, I apply user-centered design
                           principles to create interfaces that are both
                           aesthetically pleasing and user-friendly. Through

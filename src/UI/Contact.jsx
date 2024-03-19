@@ -43,7 +43,7 @@ const Contact = () => {
   return (
     <section id="contact" className="pb-16">
       <div className="container">
-        <h2 className="text-headingColor font-[700] text-[2.5rem] mb-8">
+        <h2 className="text-textColor font-[700] text-[2.5rem] mb-8">
           Send me a message:
         </h2>
         <div className="md:flex justify-between items-center">
@@ -99,7 +99,7 @@ const Contact = () => {
                 />
               </div>
 
-              <button className="w-full bg-accentColor p-3 focus:outline-none rounded-[5px] bg-smallTextColor text-white hover:bg-headingColor text-center ease-linear duration-150">
+              <button className="w-full bg-accentColor p-3 focus:outline-none rounded-[5px] bg-smallTextColor text-white hover:bg-textColor text-center ease-linear duration-150">
                 Send Message
               </button>
             </form>
