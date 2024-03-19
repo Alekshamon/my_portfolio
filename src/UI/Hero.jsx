@@ -5,11 +5,13 @@ import { CiLinkedin } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
 import Aos from "aos";
 import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 function Hero() {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
+
   return (
     <section
       className="min-h-screen flex py-10 md:flex-row flex-col items-center"
@@ -55,17 +57,17 @@ function Hero() {
             data-aos-delay="200"
             className="flex items_center gap-3 mt-7 justify-center md:justify-start"
           >
-            <a href="http://localhost:3001/contact">
-              <button className="bg-buttonColor text-white font-[500] flex text-center gap-2 hover:bg-primaryColor ease-in duration-300 py-2 px-4 rounded-[8px]">
-                <i class="ri-mail-line"></i> Hire me
+            <NavLink to="/contact">
+              <button className="bg-buttonColor text-white font-[500] flex text-center gap-2 hover:bg-primaryColor ease-in duration-300 py-2 px-2 rounded-[8px]">
+                <i class="ri-mail-line"></i> Contact me
               </button>
-            </a>
-            <a
-              href="http://localhost:3001/portfolio"
+            </NavLink>
+            <NavLink
+              to="/portfolio"
               className="text-textColor font-[600] text-[16px] hover:text-buttonColor ease-in duration-300 py-2 px-4"
             >
               See portfolio
-            </a>
+            </NavLink>
           </div>
           <p
             data-aos="fade-left"
@@ -86,20 +88,20 @@ function Hero() {
               Follow me:
             </h2>
 
-            <div
-              src="https://github.com/Alekshamon"
+            <a
+              href="https://github.com/Alekshamon"
               alt="github"
               className="text-textColor text-[40px] font-[600]  hover:cursor-pointer "
             >
               <FaGithub />
-            </div>
-            <div
-              src="https://www.linkedin.com/in/aleksandra-hamon/"
+            </a>
+            <a
+              href="https://www.linkedin.com/in/aleksandra-hamon/"
               alt="linkedin"
               className="text-textColor text-[40px] font-[600] hover:cursor-pointer"
             >
               <CiLinkedin />
-            </div>
+            </d>
           </div>
 
           {/*----------- Left end ------------*/}
