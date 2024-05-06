@@ -4,6 +4,8 @@ import Aos from "aos";
 import frontendImg from "../assets/images/front-end.png";
 import backendImg from "../assets/images/backend.png";
 import uiImg from "../assets/images/design.png";
+import Vivid24 from "../assets/images/vivid_24.png";
+import Vivid14 from "../assets/images/vivid_14.png";
 //import appsImg from "../assets/images/apps.png";
 
 const Services = () => {
@@ -12,12 +14,12 @@ const Services = () => {
   }, []);
   return (
     <section id="services">
-      <div className="container md:pt-5">
+      <div className="relative z-0 md:pt-5">
         <div className="text-center">
           <h2 className="text-textColor font-[800] text-[2.4rem] mb-5">
             What do I help
           </h2>
-          <p className="md:max-w-[600px] md:mx-auto text-textColor font-[500] text-[16px] leading-7 ">
+          <p className="md:max-w-[600px] md:mx-auto text-textColor font-[500] text-2xl mx-2">
             With a comprehensive skill set encompassing frontend development,
             backend programming, and UI/UX design, I specialize in delivering
             seamless digital solutions that marry aesthetics with functionality.
@@ -98,16 +100,16 @@ const Services = () => {
 
                   <div className="rounded-full bg-primaryColor border-white border-4 w-10 h-10 absolute left-1/2 transform -translate-x-1/2 -translate-y-4 sm:translate-y-0 flex items-center justify-center">
                     <figure>
-                      <img src={backendImg} alt="" />
+                      <img src={backendImg} alt="backendImg" />
                     </figure>
                   </div>
                 </div>
               </div>
 
               {/* =========== left card ================= */}
-              <div className="mt-6 sm:mt-0 sm:mb-12">
-                <div className="flex items-center flex-col sm:flex-row">
-                  <div className="flex justify-start w-full mx-auto items-center">
+              <div className=" mt-6 sm:mt-0 sm:mb-12">
+                <div className=" flex items-center flex-col sm:flex-row">
+                  <div className=" flex justify-start w-full mx-auto items-center">
                     <div className="w-full sm:w-1/2 sm:pr-8">
                       <div
                         data-aos="fade-right"
@@ -131,7 +133,6 @@ const Services = () => {
                       </div>
                     </div>
                   </div>
-
                   <div className="rounded-full bg-primaryColor border-white border-4 w-10 h-10 absolute left-1/2 transform -translate-x-1/2 -translate-y-4 sm:translate-y-0 flex items-center justify-center">
                     <figure>
                       <img src={uiImg} alt="" />

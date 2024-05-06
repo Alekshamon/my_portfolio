@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import data from "../assets/data/stackData";
 import React from "react";
+import Vivid15 from "../assets/images/vivid_15.png";
 
 function Stack() {
   const [stack, setStack] = useState(data);
@@ -17,12 +18,12 @@ function Stack() {
   }, [selectTab]);
 
   const buttonClasses =
-    "text-textColor border border-solid border-textColor py-2 px-4 rounded-[8px] hover:cursor-pointer hover:text-white transition-transform ease-in duration-200";
+    "text-textColor border border-solid border-textColor py-2 px-4 rounded-[8px] hover:cursor-pointer hover:text-white bg-primaryColor transition-transform ease-in duration-200";
 
   return (
-    <div className=" container mx-auto px-4">
-      <h1 className="text-textColor text-2xl font-semibold mb-6">My stack</h1>
-      <div className="flex flex-wrap justify-center gap-4 mb-6">
+    <div className="relative z-0 container mx-auto px-4">
+      <h1 className="text-textColor  text-5xl font-semibold mb-6">My stack</h1>
+      <div className="flex flex-wrap justify-center gap-4   ">
         <button onClick={() => setSelectTab("all")} className={buttonClasses}>
           All
         </button>
@@ -42,11 +43,11 @@ function Stack() {
           UI/UX
         </button>
       </div>
-      <div className="flex flex-wrap justify-center gap-4">
+      <div className=" relative z-0 flex flex-wrap justify-center gap-4 m-3">
         {stack.map((item) => (
           <div
             key={item.id}
-            className="flex items-center justify-center px-2 w-full sm:w-1/2 md:w-1/4"
+            className="flex items-center justify-center px-2 w-full sm:w-1/2 md:w-1/4 bg-primaryColor rounded-full m-4"
           >
             <div
               data-aos="zoom-in"
