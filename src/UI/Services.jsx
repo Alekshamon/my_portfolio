@@ -4,8 +4,6 @@ import Aos from "aos";
 import frontendImg from "../assets/images/front-end.png";
 import backendImg from "../assets/images/backend.png";
 import uiImg from "../assets/images/design.png";
-import Vivid24 from "../assets/images/vivid_24.png";
-import Vivid14 from "../assets/images/vivid_14.png";
 //import appsImg from "../assets/images/apps.png";
 
 const Services = () => {

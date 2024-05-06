@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import data from "../assets/data/stackData";
 import React from "react";
-import Vivid15 from "../assets/images/vivid_15.png";
 
 function Stack() {
   const [stack, setStack] = useState(data);

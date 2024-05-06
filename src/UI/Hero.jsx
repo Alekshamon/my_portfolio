@@ -7,8 +7,6 @@ import Aos from "aos";
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import Vivid7 from "../assets/images/vivid_7.png";
-import Vivid5 from "../assets/images/vivid_5.png";
-
 function Hero() {
   useEffect(() => {
     Aos.init({ duration: 1000 });
