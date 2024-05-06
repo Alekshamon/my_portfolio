@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import data from "../assets/data/portfolioData";
 import Aos from "aos";
@@ -45,14 +46,14 @@ const Portfolio = () => {
     "text-textColor border border-solid border-textColor py-2 px-4 rounded-[8px] hover:cursor-pointer hover:text-white transition-transform ease-in duration-200";
 
   return (
-    <section id="portfolio">
+    <div>
       <div className="container">
         <div className="flex items-center justify-between flex-wrap">
           <div className="mb-1">
-            <h3 className="text-textColor text-[2rem] font-[700]">
+            <h3 className="text-textColor text-5xl font-[700] mb-2">
               My recent projects
             </h3>
-            <p className="md:max-w-[600px] md:mx-auto text-textColor font-[500] text-[16px] leading-7 ">
+            <p className="md:max-w-[600px] md:mx-auto text-textColor font-[500] text-2xl my-3 ">
               Welcome to the heart of my portfolio – the showcase of my work. In
               this section, you'll find a curated selection of projects that
               demonstrate my skills, creativity, and dedication to crafting
@@ -128,7 +129,7 @@ const Portfolio = () => {
         </div> */}
       </div>
       {/* {showModal && <Modal setShowModal={setShowModal} activeID={activeID} />} */}
-    </section>
+    </div>
   );
 };
 

@@ -6,17 +6,15 @@ import { FaGithub } from "react-icons/fa";
 import Aos from "aos";
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
-
+import Vivid7 from "../assets/images/vivid_7.png";
 function Hero() {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
 
   return (
-    <section
-      className="min-h-screen flex py-10 md:flex-row flex-col items-center"
-      id="about"
-    >
+    <div className=" flex py-10 md:flex-row flex-col items-center justify-center">
+      <img src={Vivid7} alt="icon1" className="absolute left-0 top-5 " />
       {/* photo*/}
       <div
         data-aos="fade-left"
@@ -25,29 +23,28 @@ function Hero() {
       >
         <img
           src={myImg}
-          alt=""
-          className="w-[300px]  md:w-[400px]  md:object-cover"
+          alt="avatar"
+          className="w-[300px] rounded-full  md:w-[400px]  md:object-cover"
         />
       </div>
-
       <div className="flex-1">
         <div className="md:text-left text-center">
           {/*----------- Left content ------------*/}
           <h1
             data-aos="fade-right"
             data-aos-duration="1500"
-            className="md:text-5xl text-2xl md:leading-normal leading-10 text-white font-bold mt-4"
+            className="md:text-5xl text-4xl text-white font-bold mt-4"
           >
-            <span className="text-textColor md:text-6xl text-5xl">
+            <h1 className="text-textColor  md:text-6xl text-5xl">
               Hello!
               <br />
-            </span>
-            I'm <span>Aleksandra Hamon</span>
+            </h1>
+            I'm Aleksandra Hamon
           </h1>
           <h4
             data-aos="fade-right"
             data-aos-duration="1500"
-            className="md:text-2xl text-lg md:leading-normal leading-5 mt-4 font-bold text-textColor"
+            className="md:text-5xl text-2xl md:leading-normal leading-5 mt-4 font-bold text-textColor"
           >
             Web Developer
           </h4>
@@ -55,16 +52,16 @@ function Hero() {
             data-aos="fade-up"
             data-aos-duration="1800"
             data-aos-delay="200"
-            className="flex items_center gap-3 mt-7 justify-center md:justify-start"
+            className="relative z-10 flex items_center gap-3 mt-7 justify-center md:justify-start"
           >
             <NavLink to="/contact">
-              <button className="bg-buttonColor text-white font-[500] flex text-center gap-2 hover:bg-primaryColor ease-in duration-300 py-2 px-2 rounded-[8px]">
-                <i class="ri-mail-line"></i> Contact me
+              <button className="bg-buttonColor text-white flex text-center  text-xl justify-center gap-2 hover:bg-primaryColor ease-in duration-300 py-4 px-4 rounded-[8px]">
+                Contact me
               </button>
             </NavLink>
             <NavLink
               to="/portfolio"
-              className="text-textColor font-[600] text-[16px] hover:text-buttonColor ease-in duration-300 py-2 px-4"
+              className="text-textColor font-[600] text-xl hover:text-buttonColor ease-in duration-300 py-4 px-4"
             >
               See portfolio
             </NavLink>
@@ -72,7 +69,7 @@ function Hero() {
           <p
             data-aos="fade-left"
             data-aos-duration="1200"
-            className="flex gap-2 text-textColor font-[500] text-[15px] mt-12 sm:pl-14 sm:pr-10 text-justify leading-7 w-11/12 mx-auto"
+            className="relative z-10 flex gap-2 text-textColor text-3xl mt-12 sm:pl-14 sm:pr-10 text-justify mx-5"
           >
             Welcome to my portfolio website! I'm a dedicated web developer
             residing in Saint-Marcellin, Isère, France. Specializing in creating
@@ -82,11 +79,10 @@ function Hero() {
             design. Let's collaborate to bring your web projects to life with
             creativity, innovation, and technical excellence.
           </p>
+          <div></div>
 
-          <div className="flex items-center gap-5 mt-14 ml-4">
-            <h2 className="text-textColor text-[15px] font-[600]">
-              Follow me:
-            </h2>
+          <div className="relative z-10 flex items-center gap-5 mt-14 ml-4">
+            <h2 className="text-textColor text-xl font-[600]">Follow me:</h2>
 
             <a
               href="https://github.com/Alekshamon"
@@ -128,7 +124,7 @@ function Hero() {
           {/*-----------  content right end ------------*/}
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 

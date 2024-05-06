@@ -41,11 +41,11 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="pb-16 m-8">
+    <div className="pb-16 m-8">
       <h2 className="text-textColor font-[700] text-[2.5rem] mb-8 ">
         Contact me:
       </h2>
-      <p className="lg:max-w-[600px] lg:mx-auto text-textColor font-[500] text-[16px] leading-7 p-8">
+      <p className="lg:max-w-[600px] lg:mx-auto text-textColor font-[500] text-xl  leading-7 p-8">
         Thank you for taking the time to explore my portfolio. I'm excited to
         hear from you! Whether you have a project in mind, want to discuss
         potential collaboration opportunities, or simply have a question, I'm
@@ -65,7 +65,7 @@ const Contact = () => {
           ></iframe>
         </div>
 
-        <div className="w-full mt-8 md:mt-0 md:w-1/2 sm:h-[450px] lg:flex items-center bg-primaryColor px-4 lg:px-8 py-8">
+        <div className="w-full mt-8 md:mt-0 md:w-1/2 sm:h-[450px] lg:flex items-center rounded-2xl bg-primaryColor px-4 lg:px-8 py-8">
           <form onSubmit={handleSubmit} className="w-full">
             <div className="mb-5">
               <input
@@ -106,13 +106,13 @@ const Contact = () => {
               />
             </div>
 
-            <button className="w-full bg-accentColor p-3 focus:outline-none rounded-[5px] bg-smallTextColor text-white hover:bg-textColor text-center ease-linear duration-150">
+            <button className="w-auto bg-accentColor p-3 focus:outline-none rounded-xl bg-smallTextColor text-white hover:bg-textColor text-center ease-linear duration-150">
               Send Message
             </button>
           </form>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
